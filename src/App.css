@@ -8,15 +8,14 @@ body {
   background-color: #020f11;
   color: #fff;
   font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .app {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 20px;
 }
 
@@ -32,7 +31,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
+h1,
+.ticket-display h2 {
   text-align: center;
 }
 
@@ -77,13 +77,21 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .avatar img {
   display: block;
   margin: 0 auto;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border: 2px solid #25596f;
+  border-radius: 20px;
   object-fit: cover;
+  margin: 30px 0;
 }
 
 .ticket-details .row {
@@ -94,6 +102,12 @@ button:hover {
 
 .ticket-details .field {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: #25596f;
   margin: 0 10px;
 }
 
@@ -114,6 +128,11 @@ button:hover {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: #fff;
+}
+
+.home-page h2 {
+  text-align: center;
+  margin: 30px 0;
 }
 
 .step-indicator {
@@ -288,4 +307,9 @@ button:hover {
 .barcode {
   margin-top: 20px;
   text-align: center;
+}
+
+.barcode canvas {
+  max-width: 100%;
+  height: auto;
 }

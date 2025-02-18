@@ -2,13 +2,24 @@ import { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import Barcode from "react-barcode";
+import JsBarcode from "jsbarcode";
 
 const TicketDisplay = ({ ticketInfo, onCreateNewTicket }) => {
   const ticketRef = useRef(null);
+  const barcodeRef = useRef(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  // Ensure the avatar image is fully loaded before capturing the ticket
+  // Generate barcode
+  useEffect(() => {
+    if (barcodeRef.current) {
+      JsBarcode(barcodeRef.current, ticketInfo.email || "123456789012", {
+        format: "CODE128",
+        displayValue: true,
+      });
+    }
+  }, [ticketInfo.email]);
+
+  // Ensure the avatar image is loaded before capturing the ticket details
   useEffect(() => {
     const img = new Image();
     img.src = ticketInfo.avatarUrl;
@@ -37,7 +48,6 @@ const TicketDisplay = ({ ticketInfo, onCreateNewTicket }) => {
 
   return (
     <div className="ticket-display">
-      <h1>Event Name: Tech Conference 2023</h1>
       <div className="step-indicator">
         <span className="step">1</span>
         <span className="step">2</span>
@@ -54,7 +64,6 @@ const TicketDisplay = ({ ticketInfo, onCreateNewTicket }) => {
           <img
             src={ticketInfo.avatarUrl}
             alt="Avatar"
-            style={{ width: "100px", height: "100px", borderRadius: "50%" }}
           />
         </div>
         <div className="ticket-details">
@@ -86,7 +95,7 @@ const TicketDisplay = ({ ticketInfo, onCreateNewTicket }) => {
           </div>
         </div>
         <div className="barcode">
-          <Barcode value={ticketInfo.email || "123456789012"} />
+          <canvas ref={barcodeRef} />
         </div>
       </div>
       <div className="action-buttons">

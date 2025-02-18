@@ -49,12 +49,12 @@ const HomePage = ({ onNext }) => {
 
   return (
     <div className="home-page">
-      <h1>Event Name: Tech Conference 2023</h1>
       <div className="step-indicator">
         <span className="step active">1</span>
         <span className="step">2</span>
         <span className="step">3</span>
       </div>
+      <h1>Event Name: Tech Conference 2023</h1>
       <h2>Select Your Ticket Plan</h2>
       <div className="ticket-plans">
         {ticketPlans.map((plan, index) => (

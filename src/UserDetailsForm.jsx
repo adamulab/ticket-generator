@@ -58,12 +58,12 @@ const UserDetailsForm = ({ ticketInfo, onNext, onCancel }) => {
 
   return (
     <div className="user-details-form">
-      <h1>Event Name: Tech Conference 2023</h1>
       <div className="step-indicator">
         <span className="step">1</span>
         <span className="step active">2</span>
         <span className="step">3</span>
       </div>
+      <h1>Event Name: Tech Conference 2023</h1>
       <h2>Enter Your Details</h2>
       <form onSubmit={handleSubmit}>
         <div>
