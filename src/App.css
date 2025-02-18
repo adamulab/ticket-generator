@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020f11;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.home-page,
+.user-details-form,
+.ticket-display {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #031517;
+  border: 2px solid #25596f;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+}
+
+.ticket-options label {
+  display: block;
+  margin: 10px 0;
+}
+
+.num-tickets input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #25596f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a4557;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.ticket-card {
+  padding: 20px;
+}
+
+.event-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ticket-details .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ticket-details .field {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.ticket-details .full-width {
+  flex-direction: column;
+}
+
+.ticket-details label {
+  font-weight: bold;
+}
+
+.home-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #031517;
+  border: 2px solid #25596f;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #25596f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.step.active {
+  background-color: #fff;
+  color: #020f11;
+}
+
+.ticket-plans {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.plan-button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: transparent;
+  border: 2px solid #25596f;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.plan-button.selected {
+  background-color: #25596f;
+  border-color: #fff;
+}
+
+.plan-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.num-tickets {
+  margin: 20px 0;
+}
+
+.num-tickets label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.num-tickets input,
+.user-details-form input,
+.user-details-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #25596f;
+  background-color: #020f11;
+  color: #fff;
+}
+
+.user-details-form input {
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-button {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.next-button {
+  background-color: #25596f;
+  color: #fff;
+}
+
+.next-button:disabled {
+  background-color: #1a4557;
+  cursor: not-allowed;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  flex: 1;
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-button {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.next-button {
+  background-color: #25596f;
+  color: #fff;
+}
+
+.create-new-button {
+  background-color: #25596f;
+  color: #fff;
+}
+
+.download-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.next-button:disabled {
+  background-color: #1a4557;
+  cursor: not-allowed;
+}
+
+.upc {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #25596f;
+}
+
+.upc label {
+  font-weight: bold;
+}
+
+.upc p {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.barcode {
+  margin-top: 20px;
+  text-align: center;
+}
